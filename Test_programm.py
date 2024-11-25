@@ -17,6 +17,9 @@ my_list = ['Мост', 'Ветвь', 'Синица', 'Дом']
 my_str = 'Абра-Кадабра'
 my_int = 45
 
+new_string = 'Это строка из варианта-1!'
+
 # print(word_construct(my_list))
 # print(my_int)
 print(my_str)
+print(new_string)
