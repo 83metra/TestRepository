@@ -1,0 +1,33 @@
+Index: Test_programm.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print('Hallo, world!')\r\n\r\ndef word_construct(obj):\r\n    print(obj)\r\n    if isinstance(obj, (list, tuple)):\r\n        index=int(input('Введите порядковый номер в списке:'))\r\n        while index > len(obj) or index < 1:\r\n            index = int(input('Индекс больше длины списка или отрицательный! Введите ещё раз порядковый номер в списке:'))\r\n        word = obj[index - 1]\r\n        return word\r\n    elif isinstance(obj, (str, int)):\r\n        return obj\r\n    else:\r\n        return obj\r\n\r\nmy_list = ['Мост', 'Ветвь', 'Синица', 'Дом']\r\nmy_str = 'Абра-Кадабра'\r\nmy_int = 45\r\n\r\n# print(word_construct(my_list))\r\n# print(my_int)\r\nprint(my_str)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Test_programm.py b/Test_programm.py
+--- a/Test_programm.py	
++++ b/Test_programm.py	
+@@ -13,10 +13,16 @@
+     else:
+         return obj
+ 
+-my_list = ['Мост', 'Ветвь', 'Синица', 'Дом']
+-my_str = 'Абра-Кадабра'
+-my_int = 45
++# my_list = ['Мост', 'Ветвь', 'Синица', 'Дом']
++# my_str = 'Абра-Кадабра'
++# my_int = 45
+ 
+ # print(word_construct(my_list))
+ # print(my_int)
+-print(my_str)
+\ No newline at end of file
++# print(my_str)
++
++def is_valid_password(password, repeat_password):
++    return password is repeat_password
++
++a = is_valid_password('asd', 'asd')
++print(a)
+\ No newline at end of file
